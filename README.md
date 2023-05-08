@@ -1,42 +1,44 @@
-
-
 <p align="center">
-  <img src="./images/logo-classicblue-800px.png" alt="Intel Logo" width="250"/>
+  <img src="https://github.com/intel/terraform-intel-aws-databricks/blob/main/images/logo-classicblue-800px.png?raw=true" alt="Intel Logo" width="250"/>
 </p>
 
-# Intel® Cloud Optimization Modules for Terraform
+# Intel Cloud Optimization Modules for Terraform
 
 © Copyright 2022, Intel Corporation
 
-## Module name
+## Intel Optimized Databricks Cluster
+
+The module can deploy an Intel Optimized Databricks Cluster. Instance Selection and Intel Optimizations have been defaulted in the code.
+
+**Learn more about AWS optimizations :**
+
+[Databricks Photon using AWS i4i](https://www.databricks.com/blog/2022/09/13/faster-insights-databricks-photon-using-aws-i4i-instances-latest-intel-ice-lake)
+
+[Databricks Photon using Azure Edsv5](https://www.databricks.com/blog/2022/05/17/reduce-time-to-decision-with-the-databricks-lakehouse-platform-and-latest-intel-3rd-gen-xeon-scalable-processors.html)
+
+[Accelerating Databricks Runtime for Machine Learning](https://techcommunity.microsoft.com/t5/ai-customer-engineering-team/accelerating-azure-databricks-runtime-for-machine-learning/ba-p/3524273)
+
+
 
 ## Usage
 
-See examples folder for code ./examples/intel-optimized-postgresql-server/main.tf
+All the examples in example folder shows how to create a Intel Optimized Databricks cluster using this module along with the Intel Cloud Optimization Module for Databricks Workspace in AWS and Azure
 
-Example of main.tf
+**Usage Considerations**
+* **If you dont have pre-existing Databricks Workspace, use the Intel Cloud Optimization Module for Databricks Workspace:** 
+      
+    * [AWS Databricks Workspace](https://registry.terraform.io/modules/intel/aws-databricks/intel/latest)
+    * [Azure Databricks Workspace](https://registry.terraform.io/modules/intel/aws-databricks/intel/latest)
 
-```hcl
-# Example of how to pass variable for database password:
-# terraform apply -var="db_password=..."
-# Environment variables can also be used https://www.terraform.io/language/values/variables#environment-variables
+* **See examples folder and README for each examples above to use this module**
 
-# Provision Intel Cloud Optimization Module
-module "module-example" {
-  source = "github.com/intel/module-name"
-}
-
-```
 
 Run Terraform
 
 ```hcl
 terraform init  
 terraform plan
-terraform apply
-
+terraform apply 
 ```
-
-Note that this example may create resources. Run `terraform destroy` when you don't need these resources anymore.
-
-## Considerations  
+## Considerations
+More Information regarding deploying Databricks Workspace [Databricks](https://registry.terraform.io/providers/databricks/databricks/latest/docs#authentication)

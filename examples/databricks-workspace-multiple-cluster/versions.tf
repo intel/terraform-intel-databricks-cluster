@@ -1,6 +1,5 @@
 terraform {
   required_providers {
-    azurerm = "~> 3.48"
     databricks = {
       source  = "databricks/databricks"
       version = "~> 1.14.2"
@@ -9,7 +8,13 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 4.15.0"
     }
+    time = {
+      source  = "hashicorp/time"
+      version = "~> 0.9.1"
+    }
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.4.3"
+    }
   }
-
 }
-
