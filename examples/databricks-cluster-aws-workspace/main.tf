@@ -18,7 +18,7 @@ module "databricks_cluster" {
     databricks = databricks.cluster
   }
   depends_on = [
-    module.databricks_workspace
+    module.aws_databricks_workspace
   ]
   tags = {
     "owner"    = "user@example.com"

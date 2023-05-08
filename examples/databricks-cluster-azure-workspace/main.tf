@@ -11,7 +11,7 @@ module "databricks_cluster" {
   dbx_host  = module.azure_databricks_workspace.dbx_workspace_url   #Required
   dbx_cloud = "azure"                                               #Required
   depends_on = [
-    module.azure-dbx-workspace
+    module.azure_databricks_workspace
   ]
   providers = {
     databricks = databricks.cluster
