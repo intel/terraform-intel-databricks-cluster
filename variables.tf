@@ -97,5 +97,20 @@ variable "tags" {
   }
 }
 
+variable "enable_intel_tags" {
+  type    = bool
+    default = true
+  description = "If true adds additional Intel tags to resources"
+}
+
+variable "intel_tags" {
+  default     = {
+    intel-registry = "https://registry.terraform.io/namespaces/intel"
+    intel-module   = "terraform-intel-databricks-cluster"
+  }
+  type        = map(string)
+  description = "Intel Tags"
+}
+
 
 
