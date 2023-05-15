@@ -10,15 +10,57 @@
 
 The module can deploy an Intel Optimized Databricks Cluster. Instance Selection and Intel Optimizations have been defaulted in the code.
 
-**Learn more about AWS optimizations :**
+**Learn more about Intel optimizations :**
+## Performance Data
 
-[Databricks Photon using AWS i4i](https://www.databricks.com/blog/2022/09/13/faster-insights-databricks-photon-using-aws-i4i-instances-latest-intel-ice-lake)
+<center>
 
-[Databricks Photon using Azure Edsv5](https://www.databricks.com/blog/2022/05/17/reduce-time-to-decision-with-the-databricks-lakehouse-platform-and-latest-intel-3rd-gen-xeon-scalable-processors.html)
+#### [Faster insights With Databricks Photon Using AWS i4i Instances With the Latest Intel Ice Lake Scalable Processors](https://www.databricks.com/blog/2022/09/13/faster-insights-databricks-photon-using-aws-i4i-instances-latest-intel-ice-lake)
 
-[Accelerating Databricks Runtime for Machine Learning](https://techcommunity.microsoft.com/t5/ai-customer-engineering-team/accelerating-azure-databricks-runtime-for-machine-learning/ba-p/3524273)
+<p align="center">
+  <a href="https://www.databricks.com/blog/2022/09/13/faster-insights-databricks-photon-using-aws-i4i-instances-latest-intel-ice-lake">
+  <img src="https://github.com/intel/terraform-intel-databricks-cluster/blob/main/images/aws-dbx-1.png?raw=true" alt="Link" width="600"/>
+  </a>
+</p>
 
+#
+#### [5.3x relative speed up of i4i Photon against the i3 DBR](https://www.databricks.com/blog/2022/09/13/faster-insights-databricks-photon-using-aws-i4i-instances-latest-intel-ice-lake)
 
+<p align="center">
+  <a href="https://www.databricks.com/blog/2022/09/13/faster-insights-databricks-photon-using-aws-i4i-instances-latest-intel-ice-lake">
+  <img src="https://github.com/intel/terraform-intel-databricks-cluster/blob/main/images/aws-dbx-2.png?raw=true" alt="Link" width="600"/>
+  </a>
+</p>
+
+#
+#### [Reduce Time to Decision With the Databricks Lakehouse Platform and Latest Intel 3rd Gen Xeon Scalable Processors](https://www.databricks.com/blog/2022/05/17/reduce-time-to-decision-with-the-databricks-lakehouse-platform-and-latest-intel-3rd-gen-xeon-scalable-processors.html)
+
+<p align="center">
+  <a href="https://www.databricks.com/blog/2022/05/17/reduce-time-to-decision-with-the-databricks-lakehouse-platform-and-latest-intel-3rd-gen-xeon-scalable-processors.html">
+  <img src="https://github.com/intel/terraform-intel-databricks-cluster/blob/main/images/azure-dbx-1.png?raw=true" alt="Link" width="600"/>
+  </a>
+</p>
+
+#
+#### [Up to 3.0x price/performance benefits and 6.7x the speed up on Azure Edsv5](https://www.databricks.com/blog/2022/05/17/reduce-time-to-decision-with-the-databricks-lakehouse-platform-and-latest-intel-3rd-gen-xeon-scalable-processors.html)
+
+<p align="center">
+  <a href="https://www.databricks.com/blog/2022/05/17/reduce-time-to-decision-with-the-databricks-lakehouse-platform-and-latest-intel-3rd-gen-xeon-scalable-processors.html">
+  <img src="https://github.com/intel/terraform-intel-databricks-cluster/blob/main/images/azure-dbx-2.png?raw=true" alt="Link" width="600"/>
+  </a>
+</p>
+
+#
+#### [Accelerating Azure Databricks Runtime for Machine Learning](https://techcommunity.microsoft.com/t5/ai-customer-engineering-team/accelerating-azure-databricks-runtime-for-machine-learning/ba-p/3524273)
+
+<p align="center">
+  <a href="https://techcommunity.microsoft.com/t5/ai-customer-engineering-team/accelerating-azure-databricks-runtime-for-machine-learning/ba-p/3524273">
+  <img src="https://github.com/intel/terraform-intel-databricks-cluster/blob/main/images/dbx-runtime.png?raw=true" alt="Link" width="600"/>
+  </a>
+</p>
+
+#
+</center>
 
 ## Usage
 
