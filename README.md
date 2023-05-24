@@ -124,6 +124,8 @@ No modules.
 | <a name="input_dbx_num_workers"></a> [dbx\_num\_workers](#input\_dbx\_num\_workers) | Number of worker nodes that this cluster should have. A cluster has one Spark driver and num\_workers executors for a total of num\_workers + 1 Spark nodes. | `number` | `8` | no |
 | <a name="input_dbx_runtime_engine"></a> [dbx\_runtime\_engine](#input\_dbx\_runtime\_engine) | The type of runtime engine to use. If not specified, the runtime engine type is inferred based on the spark\_version value. Allowed values include: PHOTON, STANDARD. | `string` | `"PHOTON"` | no |
 | <a name="input_dbx_spark_config"></a> [dbx\_spark\_config](#input\_dbx\_spark\_config) | Key - Value pair for Intel Optimizations for Spark configuration | `map(string)` | <pre>{<br>  "spark.databricks.adaptive.autoOptimizeShuffle.enabled": "true",<br>  "spark.databricks.delta.preview.enabled": "true",<br>  "spark.databricks.io.cache.enabled": "true",<br>  "spark.databricks.io.cache.maxDiskUsage": "100g",<br>  "spark.databricks.io.cache.maxMetaDataCache": "10g",<br>  "spark.databricks.passthrough.enabled": "true"<br>}</pre> | no |
+| <a name="input_enable_intel_tags"></a> [enable\_intel\_tags](#input\_enable\_intel\_tags) | If true adds additional Intel tags to resources | `bool` | `true` | no |
+| <a name="input_intel_tags"></a> [intel\_tags](#input\_intel\_tags) | Intel Tags | `map(string)` | <pre>{<br>  "intel-module": "terraform-intel-databricks-cluster",<br>  "intel-registry": "https://registry.terraform.io/namespaces/intel"<br>}</pre> | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Tags | `map(string)` | <pre>{<br>  "key": "value"<br>}</pre> | no |
 
 ## Outputs
