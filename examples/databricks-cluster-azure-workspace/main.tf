@@ -8,8 +8,8 @@ module "azure_databricks_workspace" {
 # This example creates databricks cluster on an your Azure dbx workspace created above.
 module "databricks_cluster" {
   source    = "intel/databricks-cluster/intel"
-  dbx_host  = module.azure_databricks_workspace.dbx_workspace_url   #Required
-  dbx_cloud = "azure"                                               #Required
+  dbx_host  = module.azure_databricks_workspace.dbx_workspace_url #Required
+  dbx_cloud = "azure"                                             #Required
   depends_on = [
     module.azure_databricks_workspace
   ]
@@ -17,7 +17,7 @@ module "databricks_cluster" {
     databricks = databricks.cluster
   }
   tags = {
-    "owner"    = "user@example.com"
-    "module"   = "Intel-Cloud-Optimization-Module"
+    "owner"  = "user@example.com"
+    "module" = "Intel-Cloud-Optimization-Module"
   }
 }

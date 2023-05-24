@@ -1,5 +1,9 @@
 locals {
+  #Based on the cloud, it chooses the correct instance type for the dbx cluster
   node_type_id = var.dbx_cloud == "aws" ? var.aws_dbx_node_type_id : var.azure_dbx_node_type_id
+
+  #If the enable_intel_tags is true, then additional Intel tags will be added to the resources created
+  tags = var.enable_intel_tags ? merge(var.intel_tags, var.tags) : var.tags
 }
 resource "databricks_token" "pat" {
   # provider         = databricks.created_workspace
@@ -19,7 +23,7 @@ resource "databricks_cluster" "dbx_cluster" {
   runtime_engine          = var.dbx_runtime_engine
   num_workers             = var.dbx_num_workers
   spark_conf              = var.dbx_spark_config
-  custom_tags             = var.tags
+  custom_tags             = local.tags
 
   cluster_log_conf {
     dbfs {

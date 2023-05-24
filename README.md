@@ -10,15 +10,57 @@
 
 The module can deploy an Intel Optimized Databricks Cluster. Instance Selection and Intel Optimizations have been defaulted in the code.
 
-**Learn more about AWS optimizations :**
+**Learn more about Intel optimizations :**
+## Performance Data
 
-[Databricks Photon using AWS i4i](https://www.databricks.com/blog/2022/09/13/faster-insights-databricks-photon-using-aws-i4i-instances-latest-intel-ice-lake)
+<center>
 
-[Databricks Photon using Azure Edsv5](https://www.databricks.com/blog/2022/05/17/reduce-time-to-decision-with-the-databricks-lakehouse-platform-and-latest-intel-3rd-gen-xeon-scalable-processors.html)
+#### [Faster insights With Databricks Photon Using AWS i4i Instances With the Latest Intel Ice Lake Scalable Processors](https://www.databricks.com/blog/2022/09/13/faster-insights-databricks-photon-using-aws-i4i-instances-latest-intel-ice-lake)
 
-[Accelerating Databricks Runtime for Machine Learning](https://techcommunity.microsoft.com/t5/ai-customer-engineering-team/accelerating-azure-databricks-runtime-for-machine-learning/ba-p/3524273)
+<p align="center">
+  <a href="https://www.databricks.com/blog/2022/09/13/faster-insights-databricks-photon-using-aws-i4i-instances-latest-intel-ice-lake">
+  <img src="https://github.com/intel/terraform-intel-databricks-cluster/blob/main/images/aws-dbx-1.png?raw=true" alt="Link" width="600"/>
+  </a>
+</p>
 
+#
+#### [5.3x relative speed up of i4i Photon against the i3 DBR](https://www.databricks.com/blog/2022/09/13/faster-insights-databricks-photon-using-aws-i4i-instances-latest-intel-ice-lake)
 
+<p align="center">
+  <a href="https://www.databricks.com/blog/2022/09/13/faster-insights-databricks-photon-using-aws-i4i-instances-latest-intel-ice-lake">
+  <img src="https://github.com/intel/terraform-intel-databricks-cluster/blob/main/images/aws-dbx-2.png?raw=true" alt="Link" width="600"/>
+  </a>
+</p>
+
+#
+#### [Reduce Time to Decision With the Databricks Lakehouse Platform and Latest Intel 3rd Gen Xeon Scalable Processors](https://www.databricks.com/blog/2022/05/17/reduce-time-to-decision-with-the-databricks-lakehouse-platform-and-latest-intel-3rd-gen-xeon-scalable-processors.html)
+
+<p align="center">
+  <a href="https://www.databricks.com/blog/2022/05/17/reduce-time-to-decision-with-the-databricks-lakehouse-platform-and-latest-intel-3rd-gen-xeon-scalable-processors.html">
+  <img src="https://github.com/intel/terraform-intel-databricks-cluster/blob/main/images/azure-dbx-1.png?raw=true" alt="Link" width="600"/>
+  </a>
+</p>
+
+#
+#### [Up to 3.0x price/performance benefits and 6.7x the speed up on Azure Edsv5](https://www.databricks.com/blog/2022/05/17/reduce-time-to-decision-with-the-databricks-lakehouse-platform-and-latest-intel-3rd-gen-xeon-scalable-processors.html)
+
+<p align="center">
+  <a href="https://www.databricks.com/blog/2022/05/17/reduce-time-to-decision-with-the-databricks-lakehouse-platform-and-latest-intel-3rd-gen-xeon-scalable-processors.html">
+  <img src="https://github.com/intel/terraform-intel-databricks-cluster/blob/main/images/azure-dbx-2.png?raw=true" alt="Link" width="600"/>
+  </a>
+</p>
+
+#
+#### [Accelerating Azure Databricks Runtime for Machine Learning](https://techcommunity.microsoft.com/t5/ai-customer-engineering-team/accelerating-azure-databricks-runtime-for-machine-learning/ba-p/3524273)
+
+<p align="center">
+  <a href="https://techcommunity.microsoft.com/t5/ai-customer-engineering-team/accelerating-azure-databricks-runtime-for-machine-learning/ba-p/3524273">
+  <img src="https://github.com/intel/terraform-intel-databricks-cluster/blob/main/images/dbx-runtime.png?raw=true" alt="Link" width="600"/>
+  </a>
+</p>
+
+#
+</center>
 
 ## Usage
 
@@ -82,6 +124,8 @@ No modules.
 | <a name="input_dbx_num_workers"></a> [dbx\_num\_workers](#input\_dbx\_num\_workers) | Number of worker nodes that this cluster should have. A cluster has one Spark driver and num\_workers executors for a total of num\_workers + 1 Spark nodes. | `number` | `8` | no |
 | <a name="input_dbx_runtime_engine"></a> [dbx\_runtime\_engine](#input\_dbx\_runtime\_engine) | The type of runtime engine to use. If not specified, the runtime engine type is inferred based on the spark\_version value. Allowed values include: PHOTON, STANDARD. | `string` | `"PHOTON"` | no |
 | <a name="input_dbx_spark_config"></a> [dbx\_spark\_config](#input\_dbx\_spark\_config) | Key - Value pair for Intel Optimizations for Spark configuration | `map(string)` | <pre>{<br>  "spark.databricks.adaptive.autoOptimizeShuffle.enabled": "true",<br>  "spark.databricks.delta.preview.enabled": "true",<br>  "spark.databricks.io.cache.enabled": "true",<br>  "spark.databricks.io.cache.maxDiskUsage": "100g",<br>  "spark.databricks.io.cache.maxMetaDataCache": "10g",<br>  "spark.databricks.passthrough.enabled": "true"<br>}</pre> | no |
+| <a name="input_enable_intel_tags"></a> [enable\_intel\_tags](#input\_enable\_intel\_tags) | If true adds additional Intel tags to resources | `bool` | `true` | no |
+| <a name="input_intel_tags"></a> [intel\_tags](#input\_intel\_tags) | Intel Tags | `map(string)` | <pre>{<br>  "intel-module": "terraform-intel-databricks-cluster",<br>  "intel-registry": "https://registry.terraform.io/namespaces/intel"<br>}</pre> | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Tags | `map(string)` | <pre>{<br>  "key": "value"<br>}</pre> | no |
 
 ## Outputs
