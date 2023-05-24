@@ -11,7 +11,7 @@ module "aws_databricks_workspace" {
 
 # This module example creates databricks cluster on an your AWS dbx workspace created above.
 module "databricks_cluster" {
-  source = "intel/databricks-cluster/intel"
+  source    = "intel/databricks-cluster/intel"
   dbx_host  = module.aws_databricks_workspace.dbx_host
   dbx_cloud = var.dbx_cloud
   providers = {
@@ -21,7 +21,7 @@ module "databricks_cluster" {
     module.aws_databricks_workspace
   ]
   tags = {
-    "owner"    = "user@example.com"
-    "module"   = "Intel-Cloud-Optimization-Module"
+    "owner"  = "user@example.com"
+    "module" = "Intel-Cloud-Optimization-Module"
   }
 }

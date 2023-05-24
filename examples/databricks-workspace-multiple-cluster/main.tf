@@ -10,9 +10,9 @@ module "databricks_workspace" {
 }
 
 module "databricks_cluster" {
-  source               = "intel/databricks-cluster/intel"
-  dbx_host             = module.databricks_workspace.dbx_host
-  dbx_cloud            = var.dbx_cloud
+  source    = "intel/databricks-cluster/intel"
+  dbx_host  = module.databricks_workspace.dbx_host
+  dbx_cloud = var.dbx_cloud
   depends_on = [
     module.databricks_workspace
   ]
@@ -26,10 +26,10 @@ module "databricks_cluster" {
 }
 
 module "databricks_cluster_2" {
-  source               = "intel/databricks-cluster/intel"
-  dbx_host             = module.databricks_workspace.dbx_host
-  dbx_cloud            = var.dbx_cloud
-  dbx_cluster_name     = "dbx_optimized_cluster_2"
+  source           = "intel/databricks-cluster/intel"
+  dbx_host         = module.databricks_workspace.dbx_host
+  dbx_cloud        = var.dbx_cloud
+  dbx_cluster_name = "dbx_optimized_cluster_2"
   depends_on = [
     module.databricks_workspace
   ]
