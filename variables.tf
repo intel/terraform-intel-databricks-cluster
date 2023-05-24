@@ -113,4 +113,3 @@ variable "intel_tags" {
 }
 
 
-
