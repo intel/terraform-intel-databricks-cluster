@@ -34,7 +34,7 @@ This example showcases how to uses the [Intel Azure Databricks Workspace](https:
         # Provision Intel Cloud Optimization Module for Azure Databricks
 
         module "module-example" {
-            source                  = "intel/azure-databricks/intel"
+            source                  = "intel/azure-databricks-workspace/intel"
             resource_group_name     = <"ENTER_YOUR_RESOURCE_GROUP_NAME">                #Required. 
             dbx_workspace_name      = <"NAME_YOUR_DATABRICKS_WORKSPACE">                #Required. 
         }
@@ -42,7 +42,7 @@ This example showcases how to uses the [Intel Azure Databricks Workspace](https:
         # This example creates databricks cluster on your azure dbx workspace created above.
 
         module "databricks_cluster" {
-            source     = "../../"
+            source     = "intel/databricks-cluster/intel"
             dbx_host   = module.module-example.dbx_workspace_url       #Required
             dbx_cloud  = "azure"                                       #Required
 
