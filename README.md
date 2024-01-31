@@ -2,9 +2,9 @@
   <img src="https://github.com/intel/terraform-intel-databricks-cluster/blob/main/images/logo-classicblue-800px.png?raw=true" alt="Intel Logo" width="250"/>
 </p>
 
-# Intel Cloud Optimization Modules for Terraform
+# Intel Optimized Cloud Modules for Terraform
 
-© Copyright 2022, Intel Corporation
+© Copyright 2024, Intel Corporation
 
 ## Intel Optimized Databricks Cluster
 
@@ -89,7 +89,7 @@ More Information regarding deploying Databricks Workspace [Databricks](https://r
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 4.15.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.31 |
 | <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 3.48 |
 | <a name="requirement_databricks"></a> [databricks](#requirement\_databricks) | ~> 1.14.2 |
 
