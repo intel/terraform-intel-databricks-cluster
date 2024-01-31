@@ -89,7 +89,7 @@ More Information regarding deploying Databricks Workspace [Databricks](https://r
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 4.15.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.31 |
 | <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 3.48 |
 | <a name="requirement_databricks"></a> [databricks](#requirement\_databricks) | ~> 1.14.2 |
 
