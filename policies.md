@@ -2,50 +2,23 @@
   <img src="./images/logo-classicblue-800px.png" alt="Intel Logo" width="250"/>
 </p>
 
-# Intel® Cloud Optimization Modules for Terraform  
+# Intel® Optimized Cloud Modules for Terraform  
 
-© Copyright 2022, Intel Corporation
+© Copyright 2024, Intel Corporation
 
 ## HashiCorp Sentinel Policies
 
-This file documents the HashiCorp Sentinel policies that apply to this module
-## Policy 1
+<b>What are Sentinel Policies?</b>
 
-Description: Intel Xeon 3rd Generation Scalable processors (code-named Ice Lake) should be used. 
+HashiCorp Sentinel is a policy as code framework that can be used to enforce policies and standards across an organization's infrastructure. It allows organizations to define rules for their infrastructure using a high-level language, and integrates with a variety of HashiCorp tools, including Terraform and Vault. Sentinel policies are defined using the Sentinel language, and can be used to enforce rules such as compliance requirements, security best practices, and cost optimization. Sentinel policies can be implemented at different stages of the infrastructure development lifecycle, deployment, and runtime.
 
-```
-If dbx_cloud = 'aws' then use Storage Optimized .
-If dbx_cloud = 'azure' then use Memory Optimized.
-```
+## Intel's Sentinel Policy Structure
 
-Resource type: databricks_cluster
+Reference the `<b>intel-policy-library</b>` [README.md](https://github.com/intel/intel-policy-library/blob/main/README.md#getting-started) for details on how to get started using our policies.
 
-Parameter: node_type_id
+Intel® provides a list of `optimal` instance types per cloud resource, selected to deliver the best possible performance, security, and cost-efficiency for your cloud workloads. What sets this library apart is its dynamic nature; it is designed to automatically update, informing developers whenever more suitable hardware becomes available within their cloud environment, enabling them to make timely and informed decisions.
 
-Allowed Types
-
-- **Storage Optimized for AWS:** i4i.large, i4i.xlarge, i4i.2xlarge, i4i.4xlarge, i4i.8xlarge, i4i.16xlarge, i4i.32xlarge
-- **Memory Optimized for Azure:** Standard_E4ds_v5, Standard_E8ds_v5, Standard_E16ds_v5, Standard_E20ds_v5, Standard_E32ds_v5, Standard_E48ds_v5, Standard_E64ds_v5, Standard_E96ds_v5
-
-## Policy 2  
-
-Description: Provisioned PHOTON runtime engine should be used for enhanced performance
-
-Resource type: databricks_cluster
-
-Parameter: runtime_engine
-
-Allowed Type: PHOTON
-
-## Policy 3  
-
-Description: databricks_cluster
-
-Resource type: databricks_cluster
-
-Parameter: spark_conf
-
-Allowed Type: map(string) #(Cannot be null)
+This library also contains `recommended` instance types for AI and Confidential Computing workloads. For more information regarding Intel's AI and Confidential Computing capabilities and policies see the Intel® Xeon® Scalable Processors and Intel® Advanced Matrix Extensions (AMX) and Intel® Xeon® Scalable Processors and Confidential Computing sections in the [intel-policy-library](https://github.com/intel/intel-policy-library)
 
 ## Links
 
