@@ -73,10 +73,16 @@ variable "dbx_cluster_name" {
   default     = "dbx_optimized_cluster"
 }
 
-variable "dbx_num_workers" {
-  description = " Number of worker nodes that this cluster should have. A cluster has one Spark driver and num_workers executors for a total of num_workers + 1 Spark nodes."
+variable "dbx_autoscale_min_workers" {
+  description = "The minimum number of workers to which the cluster can scale down when underutilized. It is also the initial number of workers the cluster will have after creation."
   type        = number
-  default     = 8
+  default     = 1
+}
+
+variable "dbx_autoscale_max_workers" {
+  description = " The maximum number of workers to which the cluster can scale up when overloaded. max_workers must be strictly greater than min_workers."
+  type        = number
+  default     = 50
 }
 
 variable "dbx_auto_terminate_min" {

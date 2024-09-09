@@ -21,10 +21,13 @@ resource "databricks_cluster" "dbx_cluster" {
   node_type_id            = local.node_type_id
   autotermination_minutes = var.dbx_auto_terminate_min
   runtime_engine          = var.dbx_runtime_engine
-  num_workers             = var.dbx_num_workers
   spark_conf              = var.dbx_spark_config
   custom_tags             = local.tags
 
+  autoscale {
+    min_workers = var.dbx_autoscale_min_workers
+    max_workers = dbx_autoscale_max_workers
+  }
   cluster_log_conf {
     dbfs {
       destination = "dbfs:/FileStore/logs"
