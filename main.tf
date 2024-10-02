@@ -26,7 +26,7 @@ resource "databricks_cluster" "dbx_cluster" {
 
   autoscale {
     min_workers = var.dbx_autoscale_min_workers
-    max_workers = dbx_autoscale_max_workers
+    max_workers = var.dbx_autoscale_max_workers
   }
   cluster_log_conf {
     dbfs {

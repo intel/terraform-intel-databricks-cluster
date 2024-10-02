@@ -29,10 +29,10 @@ output "dbx_cluster_runtime_engine" {
   value       = databricks_cluster.dbx_cluster.runtime_engine
 }
 
-output "dbx_cluster_num_workers" {
-  description = "Num of workers nodes of the databricks cluster"
-  value       = databricks_cluster.dbx_cluster.num_workers
-}
+#output "dbx_cluster_num_workers" {
+ # description = "Num of workers nodes of the databricks cluster"
+ # value       = databricks_cluster.dbx_cluster.num_workers
+#}
 
 output "dbx_cluster_spark_conf" {
   description = "Spark Configurations of the databricks cluster"
@@ -43,3 +43,4 @@ output "dbx_cluster_custom_tags" {
   description = "Custom Tags"
   value       = databricks_cluster.dbx_cluster.custom_tags
 }
+
