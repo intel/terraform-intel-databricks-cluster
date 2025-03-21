@@ -108,3 +108,13 @@ output "dbx_cluster_custom_tags" {
   description = "Custom Tags"
   value       = module.databricks_cluster.dbx_cluster_custom_tags
 }
+
+output "dbx_autoscale_min_workers" {
+  description = "Min number of autoscale workers"
+  value       = module.databricks_cluster.dbx_cluster.min_workers
+}
+
+output "dbx_autoscale_max_workers" {
+  description = "Max number of autoscale workers"
+  value       = module.databricks_cluster.dbx_cluster.max_workers
+}
