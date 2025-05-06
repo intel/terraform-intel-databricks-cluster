@@ -4,7 +4,7 @@
 
 # Intel® Optimized Cloud Modules for Terraform
 
-© Copyright 2024, Intel Corporation
+© Copyright 2025, Intel Corporation
 
 ## Azure Databricks
 The module can deploy an Intel Optimized Databricks Cluster. Instance Selection and Intel Optimizations have been defaulted in the code.

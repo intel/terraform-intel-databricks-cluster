@@ -4,7 +4,7 @@
 
 # Intel® Optimized Cloud Modules for Terraform  
 
-© Copyright 2024, Intel Corporation
+© Copyright 2025, Intel Corporation
 
 ## HashiCorp Sentinel Policies
 
@@ -20,15 +20,4 @@ Intel® provides a list of `optimal` instance types per cloud resource, selected
 
 This library also contains `recommended` instance types for AI and Confidential Computing workloads. For more information regarding Intel's AI and Confidential Computing capabilities and policies see the Intel® Xeon® Scalable Processors and Intel® Advanced Matrix Extensions (AMX) and Intel® Xeon® Scalable Processors and Confidential Computing sections in the [intel-policy-library](https://github.com/intel/intel-policy-library)
 
-## Links
-
-<https://aws.amazon.com/ec2/instance-types/i4i/>
-
-<https://www.databricks.com/blog/2022/09/13/faster-insights-databricks-photon-using-aws-i4i-instances-latest-intel-ice-lake>
-
-<https://www.databricks.com/product/pricing>
-
-<https://learn.microsoft.com/en-us/azure/virtual-machines/edv5-edsv5-series>
-
-<https://www.databricks.com/blog/2022/05/17/reduce-time-to-decision-with-the-databricks-lakehouse-platform-and-latest-intel-3rd-gen-xeon-scalable-processors.html>
 
