@@ -141,13 +141,4 @@ No modules.
 | <a name="output_dbx_cluster_spark_conf"></a> [dbx\_cluster\_spark\_conf](#output\_dbx\_cluster\_spark\_conf) | Spark Configurations of the databricks cluster |
 | <a name="output_dbx_cluster_spark_version"></a> [dbx\_cluster\_spark\_version](#output\_dbx\_cluster\_spark\_version) | Spark version of the databricks cluster |
 | <a name="output_dbx_pat"></a> [dbx\_pat](#output\_dbx\_pat) | Personal Access Token |
-
-## Links
-
-<https://aws.amazon.com/ec2/instance-types/i4i/>
-<https://www.databricks.com/blog/2022/09/13/faster-insights-databricks-photon-using-aws-i4i-instances-latest-intel-ice-lake>
-<https://www.databricks.com/product/pricing>
-<https://learn.microsoft.com/en-us/azure/virtual-machines/edv5-edsv5-series>
-<https://www.databricks.com/blog/2022/05/17/reduce-time-to-decision-with-the-databricks-lakehouse-platform-and-latest-intel-3rd-gen-xeon-scalable-processors.html>
-
 <!-- END_TF_DOCS -->
